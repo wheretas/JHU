@@ -159,11 +159,15 @@ public class UserInterfaceWindow {
         submitPanel.add(resetBtn);
         disableDurationButtons(trip,twoDayBtn,threeDayBtn,fourDayBtn,fiveDayBtn,sevenDayBtn);
 
+        btnSubmit.setEnabled(false);
+
+
 
         //Clear every field and allow user to reset
         resetBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                btnSubmit.setEnabled(false);
                 hikingTrailsBox.setSelectedItem(Rates.HIKE.GARDINER);
                 monthDropDown.setSelectedItem(DateUtils.getJanMonth());
                 yearDropDown.setSelectedItem("2018");
@@ -171,7 +175,6 @@ public class UserInterfaceWindow {
                 costOutput.setText("");
                 trip.setTripName(Rates.HIKE.GARDINER);
                 disableDurationButtons(trip,twoDayBtn,threeDayBtn,fourDayBtn,fiveDayBtn,sevenDayBtn);
-                btnSubmit.setEnabled(true);
 
             }
         });
@@ -181,6 +184,8 @@ public class UserInterfaceWindow {
         threeDayBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                btnSubmit.setEnabled(true);
+
 
                 if(pressedBtn == true){
                     disableDurationButtons(trip,twoDayBtn,threeDayBtn,fourDayBtn,fiveDayBtn,sevenDayBtn);
@@ -198,6 +203,8 @@ public class UserInterfaceWindow {
         fourDayBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                btnSubmit.setEnabled(true);
+
                 if(pressedBtn == true){
                     disableDurationButtons(trip,twoDayBtn,threeDayBtn,fourDayBtn,fiveDayBtn,sevenDayBtn);
                 }
@@ -216,6 +223,8 @@ public class UserInterfaceWindow {
         fiveDayBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                btnSubmit.setEnabled(true);
+
                 if(pressedBtn == true){
                     disableDurationButtons(trip,twoDayBtn,threeDayBtn,fourDayBtn,fiveDayBtn,sevenDayBtn);
                 }
@@ -234,6 +243,8 @@ public class UserInterfaceWindow {
         twoDayBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                btnSubmit.setEnabled(true);
+
                 if(pressedBtn == true){
                     disableDurationButtons(trip,twoDayBtn,threeDayBtn,fourDayBtn,fiveDayBtn,sevenDayBtn);
                 }
@@ -250,6 +261,8 @@ public class UserInterfaceWindow {
         sevenDayBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                btnSubmit.setEnabled(true);
+
                 if(pressedBtn == true){
                     disableDurationButtons(trip,twoDayBtn,threeDayBtn,fourDayBtn,fiveDayBtn,sevenDayBtn);
                 }
